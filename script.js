@@ -32,20 +32,49 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Search and highlight the content
         if (searchTerm) {
-            content.forEach(element => highlightSearchTerm(element, searchTerm));
+            let matchCount = 0;
+            let firstMatchElement = null;
+            content.forEach(element => {
+                const matches = highlightSearchTerm(element, searchTerm);
+                matchCount += matches;
+                if (matches > 0 && !firstMatchElement) {
+                    firstMatchElement = element.querySelector('.highlight');
+                }
+            });
+
+            // Display the number of matches
+            displayMatchCount(matchCount);
+
+            // Navigate to the first match
+            if (firstMatchElement) {
+                firstMatchElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
         }
     });
 
     function highlightSearchTerm(element, searchTerm) {
         const regex = new RegExp(`(${searchTerm})`, 'gi');
-        element.innerHTML = element.innerHTML.replace(regex, '<span class="highlight">$1</span>');
+        const originalHTML = element.innerHTML;
+        element.innerHTML = originalHTML.replace(regex, '<span class="highlight">$1</span>');
+        const matches = (originalHTML.match(regex) || []).length;
         console.log("Element HTML after highlighting:", element.innerHTML); // Log the HTML after highlighting
+        return matches;
     }
 
     function clearHighlights(elements) {
         elements.forEach(element => {
             element.innerHTML = element.innerHTML.replace(/<span class="highlight">(.*?)<\/span>/g, '$1');
         });
+    }
+
+    function displayMatchCount(count) {
+        let matchCountElement = document.getElementById('matchCount');
+        if (!matchCountElement) {
+            matchCountElement = document.createElement('div');
+            matchCountElement.id = 'matchCount';
+            document.body.appendChild(matchCountElement);
+        }
+        matchCountElement.textContent = `Matches found: ${count}`;
     }
 
     // Function to update percentages for all learning outcomes
