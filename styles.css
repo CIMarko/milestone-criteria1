@@ -108,3 +108,15 @@ input[type="checkbox"]:checked + label {
     padding: 15px;
     font-weight: 350;
 }
+
+/* footer */
+.copyright {
+    text-align: center;
+    /* font-size: 1.1rem; */
+    background-color: #ea5c0a;
+    color: black;
+    border-top: 0.5px solid black;
+    width: 100%;
+    margin-top: 50px;
+
+}
