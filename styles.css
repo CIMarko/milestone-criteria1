@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@304&display=swap');
+body {
+    margin: 20px;
+    padding: 20px;
+    
+}
+
+
+.learning-outcome {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #0056b3;
+}
+
+.criteria {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: row-reverse; /* Align items at the start of the container */
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping of text without affecting the layout */
+}
+
+.criteria label {
+    flex: 1; /* Allow label to take up remaining space */
+}
+
+input[type="checkbox"] {
+    width: 20px; /* Adjust the size as needed */
+    height: 20px; /* Adjust the size as needed */
+    margin: 5px;
+    text-shadow: #333;
+    color: aqua;
+}
+input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+    color: #777; /* Optional: Change text color to gray */
+}
+.percentage {
+    font-weight: bold;
+    color: #0056b3;
+    margin-top: 10px;
+}
+.title {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+.mt {
+    margin-top: 50px;
+    border-top: 1px solid #333;
+}
+
+.links {
+    color: #ea0a0a;
+}
+.content {
+    width: 80%;
+    margin: 0 auto;
+}
+/* navigation */
+.top-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+   max-width: 60px;
+    height: 60px;
+}
+.title h1 {
+    font-size: 2.3rem;
+    font-weight: 500;
+    color: #343333;
+}
+.batn {
+    color: #ea5c0a;
+    border: 1px solid #ea5c0a;
+    border-radius: 10%;
+    background-color: #fff;
+}
+.batn:hover {
+    color: #fff;
+    background-color: #ea5c0a;
+}
+.highlight {
+    background-color: yellow;
+    columns: red;
+}
+
+.crit {
+    margin: 40px auto;
+    text-align: center;
+    color: #ea0a0a;
+    font-weight: 200;
+    letter-spacing: 0.1cm;
+}
+
+.pass h2 {
+    font-weight: 400;
+}
+.pass p {
+    padding: 15px;
+    font-weight: 350;
+}
