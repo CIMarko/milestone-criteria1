@@ -1,14 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 
-    // Load saved state
+    // Load saved state and apply initial styles
     checkboxes.forEach(checkbox => {
         checkbox.checked = localStorage.getItem(checkbox.id) === 'true';
+        updateLabelStyle(checkbox); // Apply initial style based on saved state
 
         // Save state on change
         checkbox.addEventListener('change', () => {
             localStorage.setItem(checkbox.id, checkbox.checked);
             updatePercentages(); // Update percentages when checkbox state changes
+            updateLabelStyle(checkbox); // Update label style based on checkbox state
         });
     });
 
@@ -82,6 +84,8 @@ document.addEventListener('DOMContentLoaded', function() {
         updatePercentage('learning-outcome-1');
         updatePercentage('learning-outcome-2');
         updatePercentage('learning-outcome-3');
+        updatePercentage('learning-outcome-4');
+        updatePercentage('learning-outcome-5');
     }
 
     function updatePercentage(sectionId) {
@@ -95,6 +99,21 @@ document.addEventListener('DOMContentLoaded', function() {
         const percentageElement = document.getElementById(`percentage-${sectionId}`);
         if (percentageElement) {
             percentageElement.textContent = `Completion: ${percentage}%`;
+        }
+    }
+
+    // Function to update the style of the label based on checkbox state
+    function updateLabelStyle(checkbox) {
+        const criteria = checkbox.closest('.criteria'); // Get the closest parent with class "criteria"
+        if (criteria) {
+            const explanation = criteria.querySelector('.criteria-explanation');
+            if (explanation) {
+                if (checkbox.checked) {
+                    explanation.classList.add('strike-through');
+                } else {
+                    explanation.classList.remove('strike-through');
+                }
+            }
         }
     }
 });

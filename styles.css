@@ -1,122 +1,290 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@304&display=swap');
 body {
-    margin: 20px;
-    padding: 20px;
-    
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #44484d;
+    background-color: #e5e5e5;
 }
 
-
-.learning-outcome {
-    background: #fff;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 20px;
+header {
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 2px solid #e5e5e5;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-    color: #0056b3;
-}
-
-.criteria {
-    margin: 10px 0;
+.top-nav {
     display: flex;
-    flex-direction: row-reverse; /* Align items at the start of the container */
+    align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap; /* Allow wrapping of text without affecting the layout */
+    padding: 10px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.criteria label {
-    flex: 1; /* Allow label to take up remaining space */
+.logo img {
+    max-width: 60px;
+    height: auto;
 }
 
-input[type="checkbox"] {
-    width: 20px; /* Adjust the size as needed */
-    height: 20px; /* Adjust the size as needed */
-    margin: 5px;
-    text-shadow: #333;
-    color: aqua;
-}
-input[type="checkbox"]:checked + label {
-    text-decoration: line-through;
-    color: #777; /* Optional: Change text color to gray */
-}
-.percentage {
-    font-weight: bold;
-    color: #0056b3;
-    margin-top: 10px;
-}
 .title {
-    font-size: 1.4rem;
-    font-weight: 500;
-}
-.mt {
-    margin-top: 50px;
-    border-top: 1px solid #333;
+    flex-grow: 1;
+    text-align: center;
 }
 
-.links {
-    color: #ea0a0a;
+.title .text {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #44484d;
+    margin: 0;
 }
+
+.search {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.search form {
+    display: flex;
+    align-items: center;
+}
+
+.form-control {
+    padding: 5px 10px;
+    margin-right: 10px;
+    border: 1px solid #44484d;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.batn {
+    color: #f15628;
+    border: 1px solid #f15628;
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.batn:hover {
+    color: #ffffff;
+    background-color: #f15628;
+}
+
+@media (max-width: 768px) {
+    .top-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .title .text {
+        font-size: 1.5rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    .search {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .search form {
+        width: 100%;
+    }
+
+    .form-control {
+        flex-grow: 1;
+    }
+
+    .batn {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+/* General Styles */
 .content {
     width: 80%;
     margin: 0 auto;
 }
-/* navigation */
-.top-nav {
+
+.mt {
+    margin-top: 40px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #44484d;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-size: 1.2rem;
+    color: #44484d;
+    margin-bottom: 20px;
+}
+
+/* Learning Outcome Section */
+.learning-outcome {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #ffffff; /* Solid white background */
+    border-radius: 8px;
+    border-bottom: 2px solid #ddd; /* Light grey bottom border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Center Learning Outcome Title */
+.learning-outcome {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #ffffff; /* Solid white background */
+    border-radius: 8px;
+    border-bottom: 2px solid #ddd; /* Light grey bottom border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Center Learning Outcome Title */
+.learning-outcome h2 {
+    font-size: 1.5em; /* Slightly smaller */
+    text-align: center;
+    margin-bottom: 15px;
+    color: #0056b3; /* Optional: Matching color from previous styles */
+    font-weight: 700; /* Added weight for emphasis */
+}
+
+/* Title Styling */
+.title {
+    font-size: 1.2em; /* Slightly smaller title for better visibility */
+    margin-bottom: 15px; /* Spacing between title and criteria */
+    color: #333; /* Darker color for better contrast */
+    text-align: left; /* Align title to the left */
+    font-weight: 500; /* Added weight for emphasis */
+}
+
+/* Criteria Container */
+.criteria-container {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+}
+
+/* Criteria Styling */
+.criteria {
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
 }
-.logo {
-   max-width: 60px;
-    height: 60px;
+
+/* Alternating Row Colors */
+.criteria:nth-child(odd) {
+    background-color: #f9f9f9; /* Light grey background for odd rows */
 }
-.title h1 {
-    font-size: 2.3rem;
-    font-weight: 500;
-    color: #343333;
+
+.criteria:nth-child(even) {
+    background-color: #ffffff; /* White background for even rows */
 }
-.batn {
-    color: #ea5c0a;
-    border: 1px solid #ea5c0a;
-    border-radius: 10%;
-    background-color: #fff;
+
+/* Criteria Number Styling */
+.criteria-number {
+    font-weight: normal; /* Less bold */
+    font-size: 1.1em; /* Slightly larger size */
+    margin-right: 18px; /* Added spacing to the right */
 }
-.batn:hover {
-    color: #fff;
-    background-color: #ea5c0a;
+
+/* Criteria Explanation Styling */
+.criteria-explanation {
+    flex: 1;
+    font-size: 1em; /* Ensure text is readable */
 }
-.highlight {
-    background-color: yellow;
-    columns: red;
+
+/* Criteria Checkbox Styling */
+.criteria-checkbox {
+    margin-left: auto;
+}
+
+.criteria-checkbox input[type="checkbox"] {
+    width: 18px; /* Larger checkbox */
+    height: 18px; /* Larger checkbox */
 }
 
 .crit {
-    margin: 40px auto;
     text-align: center;
-    color: #ea0a0a;
-    font-weight: 200;
-    letter-spacing: 0.1cm;
-}
-
-.pass h2 {
     font-weight: 400;
+    letter-spacing: 0.5;
+    color: #c73209;
 }
-.pass p {
-    padding: 15px;
-    font-weight: 350;
+.btn.btn-merit {
+    color: #ffffff !important; /* White text */
+    background-color: #ea5c0a !important; /* Orange background */
+    border: 1px solid #ea5c0a !important; /* Orange border */
+    border-radius: 5px !important; /* Rounded corners */
+    font-size: 1em !important; /* Font size */
+    font-weight: 500 !important; /* Font weight */
+    cursor: pointer !important; /* Pointer cursor on hover */
+    transition: background-color 0.3s, border-color 0.3s !important; /* Smooth transition */
 }
 
-/* footer */
-.copyright {
-    text-align: center;
-    /* font-size: 1.1rem; */
-    background-color: #ea5c0a;
-    color: black;
-    border-top: 0.5px solid black;
-    width: 100%;
-    margin-top: 50px;
+.btn.btn-merit:hover {
+    background-color: #d54017 !important; /* Slightly darker orange on hover */
+    border-color: #e8491c !important; /* Border color on hover */
+}
 
+/* Modal Styling (Optional, for consistency) */
+.modal-content {
+    border-radius: 8px; /* Rounded corners */
+}
+
+.modal-header {
+    border-bottom: 1px solid #ddd; /* Light grey bottom border */
+}
+
+.modal-footer {
+    border-top: 1px solid #ddd; /* Light grey top border */
+}
+
+#copy {
+    background-color: #333; /* Dark background for contrast */
+    color: #fff; /* White text color */
+    padding: 20px 0; /* Padding for spacing */
+    text-align: center; /* Center the text */
+    font-size: 0.9rem; /* Slightly smaller font size */
+    border-top: 2px solid #ea5c0a; /* Orange top border for emphasis */
+}
+
+#copy .container {
+    max-width: 1200px; /* Restrict maximum width */
+    margin: 0 auto; /* Center the container */
+    padding: 0 15px; /* Padding on left and right */
+}
+
+#copy p {
+    margin: 0; /* Remove default margin */
+    font-weight: 400; /* Regular font weight */
+}
+
+.highlight {
+    background-color: rgb(215, 82, 25); /* Change this to your desired highlight color */
+    color: #000000;
+}
+.criteria-checkbox input[type="checkbox"]:checked + .criteria-explanation {
+    text-decoration: line-through;
+    color: #777; /* Optional: Change text color to gray */
+}
+.strike-through {
+    text-decoration: line-through;
+    color: #777; /* Optional: Change text color to gray */
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .criteria {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .criteria input[type="checkbox"] {
+        margin-bottom: 10px;
+    }
 }
