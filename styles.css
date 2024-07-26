@@ -133,17 +133,7 @@ h2 {
     background-color: #ffffff; /* Solid white background */
     border-radius: 8px;
     border-bottom: 2px solid #ddd; /* Light grey bottom border */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
-
-/* Center Learning Outcome Title */
-.learning-outcome {
-    padding: 20px;
-    margin-bottom: 20px;
-    background-color: #ffffff; /* Solid white background */
-    border-radius: 8px;
-    border-bottom: 2px solid #ddd; /* Light grey bottom border */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 /* Center Learning Outcome Title */
@@ -151,17 +141,17 @@ h2 {
     font-size: 1.5em; /* Slightly smaller */
     text-align: center;
     margin-bottom: 15px;
-    color: #0056b3; /* Optional: Matching color from previous styles */
-    font-weight: 700; /* Added weight for emphasis */
+    color: #0056b3; 
+    font-weight: 700;   
 }
 
 /* Title Styling */
 .title {
-    font-size: 1.2em; /* Slightly smaller title for better visibility */
-    margin-bottom: 15px; /* Spacing between title and criteria */
-    color: #333; /* Darker color for better contrast */
-    text-align: left; /* Align title to the left */
-    font-weight: 500; /* Added weight for emphasis */
+    font-size: 1.2em; 
+    margin-bottom: 15px; 
+    color: #333; 
+    text-align: left; 
+    font-weight: 500; 
 }
 
 /* Criteria Container */
@@ -189,15 +179,15 @@ h2 {
 
 /* Criteria Number Styling */
 .criteria-number {
-    font-weight: normal; /* Less bold */
-    font-size: 1.1em; /* Slightly larger size */
-    margin-right: 18px; /* Added spacing to the right */
+    font-weight: normal; 
+    font-size: 1.1em; 
+    margin-right: 18px; 
 }
 
 /* Criteria Explanation Styling */
 .criteria-explanation {
     flex: 1;
-    font-size: 1em; /* Ensure text is readable */
+    font-size: 1em; 
 }
 
 /* Criteria Checkbox Styling */
@@ -217,52 +207,52 @@ h2 {
     color: #c73209;
 }
 .btn.btn-merit {
-    color: #ffffff !important; /* White text */
-    background-color: #ea5c0a !important; /* Orange background */
-    border: 1px solid #ea5c0a !important; /* Orange border */
-    border-radius: 5px !important; /* Rounded corners */
-    font-size: 1em !important; /* Font size */
-    font-weight: 500 !important; /* Font weight */
-    cursor: pointer !important; /* Pointer cursor on hover */
-    transition: background-color 0.3s, border-color 0.3s !important; /* Smooth transition */
+    color: #ffffff !important;
+    background-color: #ea5c0a !important; 
+    border: 1px solid #ea5c0a !important; 
+    border-radius: 5px !important; 
+    font-size: 1em !important; 
+    font-weight: 500 !important; 
+    cursor: pointer !important; 
+    transition: background-color 0.3s, border-color 0.3s !important; 
 }
 
 .btn.btn-merit:hover {
-    background-color: #d54017 !important; /* Slightly darker orange on hover */
-    border-color: #e8491c !important; /* Border color on hover */
+    background-color: #d54017 !important; 
+    border-color: #e8491c !important; 
 }
 
-/* Modal Styling (Optional, for consistency) */
+/* Modal Styling */
 .modal-content {
-    border-radius: 8px; /* Rounded corners */
+    border-radius: 8px; 
 }
 
 .modal-header {
-    border-bottom: 1px solid #ddd; /* Light grey bottom border */
+    border-bottom: 1px solid #ddd; 
 }
 
 .modal-footer {
-    border-top: 1px solid #ddd; /* Light grey top border */
+    border-top: 1px solid #ddd;
 }
 
 #copy {
-    background-color: #333; /* Dark background for contrast */
-    color: #fff; /* White text color */
-    padding: 20px 0; /* Padding for spacing */
-    text-align: center; /* Center the text */
-    font-size: 0.9rem; /* Slightly smaller font size */
-    border-top: 2px solid #ea5c0a; /* Orange top border for emphasis */
+    background-color: #333; 
+    color: #fff; 
+    padding: 20px 0;
+    text-align: center; 
+    font-size: 0.9rem; 
+    border-top: 2px solid #ea5c0a; 
 }
 
 #copy .container {
-    max-width: 1200px; /* Restrict maximum width */
-    margin: 0 auto; /* Center the container */
-    padding: 0 15px; /* Padding on left and right */
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 15px; 
 }
 
 #copy p {
-    margin: 0; /* Remove default margin */
-    font-weight: 400; /* Regular font weight */
+    margin: 0; 
+    font-weight: 400;
 }
 
 .highlight {
@@ -271,11 +261,11 @@ h2 {
 }
 .criteria-checkbox input[type="checkbox"]:checked + .criteria-explanation {
     text-decoration: line-through;
-    color: #777; /* Optional: Change text color to gray */
+    color: #777; 
 }
 .strike-through {
     text-decoration: line-through;
-    color: #777; /* Optional: Change text color to gray */
+    color: #777;
 }
 .helper {
     display: flex;
