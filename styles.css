@@ -277,6 +277,23 @@ h2 {
     text-decoration: line-through;
     color: #777; /* Optional: Change text color to gray */
 }
+.helper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.help {
+    text-decoration: none;
+    letter-spacing: 0.06cm;
+    color: #c73209;
+}
+.help:hover {
+    font-weight: 500;
+    border-bottom: 1px solid #c73209;
+}
+.logo {
+    margin-right: 30px;
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     .criteria {
