@@ -281,6 +281,11 @@ h2 {
     font-weight: 500;
     border-bottom: 1px solid #c73209;
 }
+.percentage {
+    font-size: 0.9rem;
+    color: #44484d;
+    font-weight: 300;
+}
 .logo {
     margin-right: 30px;
 }
