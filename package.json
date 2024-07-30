@@ -1,0 +1,10 @@
+{
+    "name": "my-static-site",
+    "version": "1.0.0",
+    "scripts": {
+      "start": "serve -s ."
+    },
+    "dependencies": {
+      "serve": "^13.0.0"
+    }
+  }
