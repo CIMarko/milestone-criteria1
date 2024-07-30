@@ -27,10 +27,6 @@ header {
     height: auto;
 }
 
-.title {
-    flex-grow: 1;
-    text-align: center;
-}
 
 .title .text {
     font-size: 1.8rem;
@@ -42,12 +38,11 @@ header {
 .search {
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    align-items: flex-end;
 }
 
-.search form {
-    display: flex;
-    align-items: center;
+.search-form {
+    text-align: center;
 }
 
 .form-control {
@@ -90,9 +85,6 @@ header {
         margin-top: 10px;
     }
 
-    .search form {
-        width: 100%;
-    }
 
     .form-control {
         flex-grow: 1;
@@ -101,7 +93,6 @@ header {
     .batn {
         width: 100%;
         text-align: center;
-        margin-top: 10px;
     }
 }
 /* General Styles */
@@ -120,16 +111,11 @@ h2 {
     margin-bottom: 10px;
 }
 
-.title {
-    font-size: 1.2rem;
-    color: #44484d;
-    margin-bottom: 20px;
-}
 
 /* Learning Outcome Section */
 .learning-outcome {
     padding: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     background-color: #ffffff; /* Solid white background */
     border-radius: 8px;
     border-bottom: 2px solid #ddd; /* Light grey bottom border */
@@ -144,7 +130,13 @@ h2 {
     color: #0056b3; 
     font-weight: 700;   
 }
-
+.links {
+    color: #23bbbb;
+    font-weight: 500;
+}
+.links:hover {
+    color: #f15628;
+}
 /* Title Styling */
 .title {
     font-size: 1.2em; 
@@ -285,6 +277,8 @@ h2 {
     font-size: 0.9rem;
     color: #44484d;
     font-weight: 300;
+    border-top: 2px #44484d solid;
+  
 }
 .logo {
     margin-right: 30px;

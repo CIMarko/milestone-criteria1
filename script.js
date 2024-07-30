@@ -114,6 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
         updatePercentage('learning-outcome-3');
         updatePercentage('learning-outcome-4');
         updatePercentage('learning-outcome-5');
+        updatePercentage('learning-outcome-6');
     }
 
     function updatePercentage(sectionId) {
@@ -126,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const percentage = (checked / total * 100).toFixed(0);
         const percentageElement = document.getElementById(`percentage-${sectionId}`);
         if (percentageElement) {
-            percentageElement.textContent = `Completion: ${percentage}%`;
+            percentageElement.textContent = ` ${percentage}%`;
         }
     }
 
