@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOMContentLoaded event fired');
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-
+    console.log('Checkboxes:', checkboxes);
     // Load saved state and apply initial styles
     checkboxes.forEach(checkbox => {
         checkbox.checked = localStorage.getItem(checkbox.id) === 'true';
