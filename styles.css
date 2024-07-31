@@ -162,7 +162,7 @@ h2 {
 
 /* Alternating Row Colors */
 .criteria:nth-child(odd) {
-    background-color: #f9f9f9; /* Light grey background for odd rows */
+    background-color: #faf6f6; /* Light grey background for odd rows */
 }
 
 .criteria:nth-child(even) {
